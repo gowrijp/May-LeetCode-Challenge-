@@ -23,5 +23,7 @@ A palindrome is a word, phrase, or sequence that reads the same backward as forw
 
 Example: Civic, level, madam, mom and noon are all palindromes.
 
+[Video for understanding Anagram Indices](https://youtu.be/h4MCwdfZZas)
+
 All palindromes and anagrams are permutations, but not all permutations are either anagrams or palindromes.
 
