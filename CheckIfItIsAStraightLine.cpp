@@ -1,3 +1,6 @@
+//https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3323/
+//O(n) time
+
 class Solution {
 public:
     bool checkStraightLine(vector<vector<int>>& coordinates) {
@@ -13,5 +16,4 @@ public:
     }
 };
 
-//https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3323/
-//O(n) time
+
