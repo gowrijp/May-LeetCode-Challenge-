@@ -7,8 +7,7 @@ public:
            while (ans.length() && ans.back() > c && k) {
                ans.pop_back();                                  // make sure digits in ans are in ascending order
                k--;                                             // remove one char
-           }
-           
+           }           
            if (ans.length() || c != '0') { ans.push_back(c); }  // can't have leading '0'
        }
        
