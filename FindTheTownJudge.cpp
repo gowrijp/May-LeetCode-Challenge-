@@ -17,25 +17,33 @@ public:
 
 //https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3325/
 // O(N)
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//My Solution
 
 class Solution {
 public:
     int findJudge(int N, vector<vector<int>>& trust) {
-        // We can consider each label as a graph node
-        // find the indegree and out degree of each node
-        vector<int> indegree(N, 0), outdegree(N, 0);
-        for(auto trust_edge: trust) {
-            ++indegree[trust_edge[1] - 1];
-            ++outdegree[trust_edge[0] - 1];
+        int siz=trust.size();
+        if(N==1 and siz == 0){
+            return 1;
         }
+        map<int,int> fir;
+        map<int,int> sec;
         
-        // now check which node has N-1 indegree and for that node
-        // check if its outdegree is also 0, if both cond. are true, then that
-        // ndoe is town judge
-        for(int i = 0; i < indegree.size(); i++) {
-            if(indegree[i] == N-1 && outdegree[i] == 0)
-                return i + 1;
+        for(int i=0;i<siz;i++){
+            if(fir.find(trust[i][0])==fir.end()){
+                fir[trust[i][0]]=1;
+            }
+            
+            sec[trust[i][1]]++;
+            
+        }
+        for(auto i: sec){
+            if(i.second==N-1 && fir.find(i.first)==fir.end()){
+                return i.first;
+            }
         }
         return -1;
+        
     }
 };
