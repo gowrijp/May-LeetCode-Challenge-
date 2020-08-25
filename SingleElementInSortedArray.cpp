@@ -22,3 +22,24 @@ public:
 
 //Time Complexity: O(1)
 //LeetCode Link:https://leetcode.com/problems/single-element-in-a-sorted-array/
+
+// My Solution
+class Solution {
+public:
+    int singleNonDuplicate(vector<int>& nums) {
+        int n=nums.size();
+        if(n==1) return nums[0];
+        int i=0;
+        while(i<n-1){
+            if(nums[i]==nums[i+1]){
+                i=i+2;
+            }
+            else{
+                return nums[i];
+                
+            }
+        }
+        if(i==n-1 and nums[i]!=nums[i-1]) return nums[i];
+        return -1;
+    }
+};
