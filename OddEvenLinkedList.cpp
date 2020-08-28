@@ -37,6 +37,5 @@ public:
         else root1->next = NULL;
         return head;
     }
-        
-    
+            
 };
