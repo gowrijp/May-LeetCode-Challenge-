@@ -40,7 +40,8 @@ public:
 //Memory: 8.6MB
 //LeetCode Link:https://leetcode.com/problems/sort-characters-by-frequency/
 
-//Using Priority Queue
+//Using Priority Queue 
+// This is better
 
 class Solution {
 public:
