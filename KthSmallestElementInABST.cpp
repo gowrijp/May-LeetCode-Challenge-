@@ -2,7 +2,6 @@ class Solution {
 public:
     int kthSmallest(TreeNode* root, int k) {
         if(root == NULL) return 0;
-        
         set<int> numSet;
         int cnt = 1;
         queue<TreeNode*> q;
