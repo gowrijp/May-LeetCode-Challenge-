@@ -3,8 +3,7 @@ class StockSpanner {
 public:
     StockSpanner() {
         
-    }
-    
+    }   
     int next(int price) 
     {
         int res = 1;
