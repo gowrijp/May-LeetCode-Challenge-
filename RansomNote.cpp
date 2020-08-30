@@ -1,23 +1,19 @@
 class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
-        unordered_map<char, int> map1;
-        unordered_map<char, int> map2;
-        
-        
-        for(const char&c : magazine){
-            map2[c]++;
+        unordered_map<int,int> mp;
+        int n=magazine.size();
+        for(int i=0;i<n;i++){
+            mp[magazine[i]-'a']++;
         }
-        
-        for(const char&c : ransomNote){
-            map1[c]++;
-            if(map1[c]>map2[c]){
+        n=ransomNote.size();
+        for(int i=0;i<n;i++){
+            mp[ransomNote[i]-'a']--;
+            if(mp[ransomNote[i]-'a']<0){
                 return false;
             }
-            
         }
         return true;
-        
     }
 };
 
