@@ -18,7 +18,6 @@ public:
 };
 
 //Method 2
-
 class Solution {
 public:
     int firstUniqChar(string s) {
